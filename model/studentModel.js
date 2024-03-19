@@ -1,23 +1,22 @@
-module.exports = (sequelize, Datatypes)=>{
-
-    const Student = sequelize.define('students',{
+module.exports=(sequelize, DataTypes) =>{
+    const student = sequelize.define('student', {
         student_id:{
-            type: Datatypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        firstname:{
-            type: Datatypes.STRING,
+        first_name:{
+            type: DataTypes.STRING,
             allowNull: false,
         },
-        lastname:{
-            type: Datatypes.STRING,
+        last_name:{
+            type: DataTypes.STRING,
             allowNull: false,
         },
         gender:{
-            type: Datatypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
         },
     });
-    return Student;
+    return student;
 }
